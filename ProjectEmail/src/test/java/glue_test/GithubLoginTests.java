@@ -16,13 +16,13 @@ public class GithubLoginTests {
 //        emailloginpage = new Emailloginpage(hooks.driver);
 //    }
 
-    @Given("enter valid username {string}")
-    public void enterValidUsername(String username) {
+    @Given("enter username {string}")
+    public void enterUsername(String username) {
         githubloginpage.username(username);
     }
 
-    @And("enter valid password {string}")
-    public void enterValidPassword(String password) {
+    @And("enter password {string}")
+    public void enterPassword(String password) {
         githubloginpage.password(password);
     }
 
