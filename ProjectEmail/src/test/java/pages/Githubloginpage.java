@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class Emailloginpage extends CommonBaseActions {
+public class Githubloginpage extends CommonBaseActions {
 
     By usernamexpath = By.id("login_field");
     By passwordxpath = By.id("password");
@@ -14,7 +14,7 @@ public class Emailloginpage extends CommonBaseActions {
     By errormessagexpath = By.xpath("//div[contains(text(), 'Incorrect')]");
     WebDriver driver;
 
-    public Emailloginpage(WebDriver driver) {
+    public Githubloginpage(WebDriver driver) {
         super(driver);
         this.driver = driver;
     }
