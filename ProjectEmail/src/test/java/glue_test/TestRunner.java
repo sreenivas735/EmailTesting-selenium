@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         features = "src\\test\\resources\\emailloginpage.feature",
         glue = "glue_test",
         tags = "@loin-functionality",
-        plugin ={"pretty", "html:target/reports-email-loginpage-invalid-creds.html" }
+        plugin = {"pretty", "html:target/reports-email-loginpage-invalid-creds.html"}
 
 )
 public class TestRunner {
