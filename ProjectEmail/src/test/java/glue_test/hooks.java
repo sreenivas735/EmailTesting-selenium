@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class hooks {
-   static WebDriver driver;
+    static WebDriver driver;
 
     @Before
     public void beforemethod() throws Exception {
@@ -28,12 +28,12 @@ public class hooks {
 
 
         if (browser.equals("edge")) {
-            System.setProperty("webdriver.edge.driver",path+"\\msedgedriver.exe" );
+            System.setProperty("webdriver.edge.driver", path + "\\msedgedriver.exe");
             driver = new EdgeDriver();
-        }else if(browser.equals("chrome")){
-            System.setProperty("webdriver.chrome.driver",path+"\\chromedriver.exe" );
+        } else if (browser.equals("chrome")) {
+            System.setProperty("webdriver.chrome.driver", path + "\\chromedriver.exe");
             driver = new ChromeDriver();
-        }else {
+        } else {
             throw new driverinvalid("given driver is invalid please check it once");
         }
         driver.manage().window().maximize();
@@ -44,13 +44,13 @@ public class hooks {
 
     @After
     public void aftermethod() {
-
+        driver.quit();
     }
 }
 
-class driverinvalid extends Exception{
+class driverinvalid extends Exception {
 
-    driverinvalid(String str){
+    driverinvalid(String str) {
         super(str);
     }
 }

@@ -18,125 +18,125 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class loginpage {
-    public static void main(String[] args) throws InterruptedException, GivenVauleisoutofthemonth, ParseException {
+    public static void main(String[] args) throws Exception {
         System.setProperty("webdriver.edge.driver", "C:\\Users\\sreenu\\IdeaProjects\\selinium-maven\\msedgedriver.exe");
         EdgeDriver driver = new EdgeDriver();
         driver.manage().window().maximize();
         driver.get("https://testautomationpractice.blogspot.com/");
-        driver.findElement(By.id("name")).sendKeys("Sreenivas Surepalli");
-
-        driver.findElement(By.id("email")).sendKeys("Vasusurepalli735@gmail.com");
-
-        driver.findElement(By.id("phone")).sendKeys("6302305451");
-
-        driver.findElement(By.id("textarea")).sendKeys("Vembuluru, Dakkili, Tirupathi, Andrapradesh - 524134");
-
-        driver.findElement(By.id("male")).click();
-
-        driver.findElement(By.id("sunday")).click();
-        driver.findElement(By.id("friday")).click();
-        driver.findElement(By.id("tuesday")).click();
-
-
-        WebElement country = driver.findElement(By.id("country"));
-        country.click();
-        Select dropcountry = new Select(country);
-        dropcountry.selectByValue("japan");
-
-        WebElement colors = driver.findElement(By.id("colors"));
-        Select dropcolors = new Select(colors);
-        dropcolors.selectByValue("blue");
-
-
-//        WebElement opencartlink = driver.findElement(By.xpath("//a[contains(text(), 'open cart')]"));
-//        opencartlink.click();
+//        driver.findElement(By.id("name")).sendKeys("Sreenivas Surepalli");
 //
-//        WebElement openOrangeHRM = driver.findElement(By.xpath("//a[contains(text(), 'orange HRM')]"));
-//        openOrangeHRM.click();
-
-
-        WebElement eleTable = driver.findElement(By.xpath("(//a[contains(text(), '2')])[1]"));
-        eleTable.click();
-
-        Thread.sleep(2000);
-        WebElement eleTable1 = driver.findElement(By.xpath("(//a[contains(text(), '3')])[1]"));
-        eleTable1.click();
-        Thread.sleep(2000);
-        WebElement eleTable2 = driver.findElement(By.xpath("(//a[contains(text(), '4')])[1]"));
-        eleTable2.click();
-
-
-        driver.findElement(By.id("Wikipedia1_wikipedia-search-input")).sendKeys("selenium" + Keys.ENTER);
-
-//        WebElement nextpage = driver.findElement(By.xpath("//button[contains(text(), 'New Browser Window')]"));
-//        nextpage.click();
-
-
-        WebElement art1 = driver.findElement(By.xpath("//button[@onclick='myFunctionAlert()']"));
-        art1.click();
-        Alert art = driver.switchTo().alert();
-//        System.out.println(art.getText());
-        art.accept();
-
-
-        Thread.sleep(2000);
-        WebElement art2 = driver.findElement(By.xpath("//button[@onclick='myFunctionConfirm()']"));
-        art2.click();
-        Alert artt = art;
-//        System.out.println(art.getText());
-        artt.dismiss();
-        Thread.sleep(2000);
-
-
-        WebElement art3 = driver.findElement(By.xpath("//button[@onclick='myFunctionPrompt()']"));
-        art3.click();
-        Alert arttt = art;
-        arttt.sendKeys("vasudev");
-//        System.out.println(art.getText());
-        arttt.accept();
-
-
-        Actions act = new Actions(driver);
-
-        WebElement doubleclick = driver.findElement(By.xpath("//button[@ondblclick='myFunction1()']"));
-        act.doubleClick(doubleclick).build().perform();
-
-        WebElement drag = driver.findElement(By.xpath("//div[@id='draggable']"));
-        WebElement drop = driver.findElement(By.xpath("//div[@id='droppable']"));
-        act.dragAndDrop(drag, drop).build().perform();
-
-
-        WebElement frame = driver.findElement(By.id("frame-one796456169"));
-        driver.switchTo().frame(frame);
-
-        WebElement user = driver.findElement(By.id("RESULT_TextField-0"));
-        user.sendKeys("vasudev krishna");
-
-
-        WebElement radio = driver.findElement(By.xpath("//label[contains(text(), 'Female')]"));
-        radio.click();
-
-        WebElement skill = driver.findElement(By.id("RESULT_RadioButton-3"));
-        Select dropSkill = new Select(skill);
-        dropSkill.selectByVisibleText("Developer");
-
-        WebElement framecal = driver.findElement(By.id("RESULT_TextField-2"));
-        framecal.sendKeys("04/25/2020");
-
-        Thread.sleep(5000);
-
-        WebElement framcal1 = driver.findElement(By.xpath("//span[@class='icon_calendar']"));
-        framcal1.click();
-
-
-        WebElement yearselect = driver.findElement(By.xpath("//select[@data-handler='selectYear']"));
+//        driver.findElement(By.id("email")).sendKeys("Vasusurepalli735@gmail.com");
+//
+//        driver.findElement(By.id("phone")).sendKeys("6302305451");
+//
+//        driver.findElement(By.id("textarea")).sendKeys("Vembuluru, Dakkili, Tirupathi, Andrapradesh - 524134");
+//
+//        driver.findElement(By.id("male")).click();
+//
+//        driver.findElement(By.id("sunday")).click();
+//        driver.findElement(By.id("friday")).click();
+//        driver.findElement(By.id("tuesday")).click();
+//
+//
+//        WebElement country = driver.findElement(By.id("country"));
+//        country.click();
+//        Select dropcountry = new Select(country);
+//        dropcountry.selectByValue("japan");
+//
+//        WebElement colors = driver.findElement(By.id("colors"));
+//        Select dropcolors = new Select(colors);
+//        dropcolors.selectByValue("blue");
+//
+//
+////        WebElement opencartlink = driver.findElement(By.xpath("//a[contains(text(), 'open cart')]"));
+////        opencartlink.click();
+////
+////        WebElement openOrangeHRM = driver.findElement(By.xpath("//a[contains(text(), 'orange HRM')]"));
+////        openOrangeHRM.click();
+//
+//
+//        WebElement eleTable = driver.findElement(By.xpath("(//a[contains(text(), '2')])[1]"));
+//        eleTable.click();
+//
+//        Thread.sleep(2000);
+//        WebElement eleTable1 = driver.findElement(By.xpath("(//a[contains(text(), '3')])[1]"));
+//        eleTable1.click();
+//        Thread.sleep(2000);
+//        WebElement eleTable2 = driver.findElement(By.xpath("(//a[contains(text(), '4')])[1]"));
+//        eleTable2.click();
+//
+//
+//        driver.findElement(By.id("Wikipedia1_wikipedia-search-input")).sendKeys("selenium" + Keys.ENTER);
+//
+////        WebElement nextpage = driver.findElement(By.xpath("//button[contains(text(), 'New Browser Window')]"));
+////        nextpage.click();
+//
+//
+//        WebElement art1 = driver.findElement(By.xpath("//button[@onclick='myFunctionAlert()']"));
+//        art1.click();
+//        Alert art = driver.switchTo().alert();
+////        System.out.println(art.getText());
+//        art.accept();
+//
+//
+//        Thread.sleep(2000);
+//        WebElement art2 = driver.findElement(By.xpath("//button[@onclick='myFunctionConfirm()']"));
+//        art2.click();
+//        Alert artt = art;
+////        System.out.println(art.getText());
+//        artt.dismiss();
+//        Thread.sleep(2000);
+//
+//
+//        WebElement art3 = driver.findElement(By.xpath("//button[@onclick='myFunctionPrompt()']"));
+//        art3.click();
+//        Alert arttt = art;
+//        arttt.sendKeys("vasudev");
+////        System.out.println(art.getText());
+//        arttt.accept();
+//
+//
+//        Actions act = new Actions(driver);
+//
+//        WebElement doubleclick = driver.findElement(By.xpath("//button[@ondblclick='myFunction1()']"));
+//        act.doubleClick(doubleclick).build().perform();
+//
+//        WebElement drag = driver.findElement(By.xpath("//div[@id='draggable']"));
+//        WebElement drop = driver.findElement(By.xpath("//div[@id='droppable']"));
+//        act.dragAndDrop(drag, drop).build().perform();
+//
+//
+//        WebElement frame = driver.findElement(By.id("frame-one796456169"));
+//        driver.switchTo().frame(frame);
+//
+//        WebElement user = driver.findElement(By.id("RESULT_TextField-0"));
+//        user.sendKeys("vasudev krishna");
+//
+//
+//        WebElement radio = driver.findElement(By.xpath("//label[contains(text(), 'Female')]"));
+//        radio.click();
+//
+//        WebElement skill = driver.findElement(By.id("RESULT_RadioButton-3"));
+//        Select dropSkill = new Select(skill);
+//        dropSkill.selectByVisibleText("Developer");
+//
+//        WebElement framecal = driver.findElement(By.id("RESULT_TextField-2"));
+//        framecal.sendKeys("04/25/2020");
+//
+//        Thread.sleep(5000);
+//
+//        WebElement framcal1 = driver.findElement(By.xpath("//span[@class='icon_calendar']"));
+//        framcal1.click();
+////
+//
+//        WebElement yearselect = driver.findElement(By.xpath("//select[@data-handler='selectYear']"));
         SelectCalender calenders = new SelectCalender(driver);
-        calenders.foranothercalinframe(yearselect, "1998", "October", "18");
-
-//        WebElement submit = driver.findElement(By.name("Submit"));
-//        submit.click();
-
-        driver.switchTo().defaultContent();
+//        calenders.foranothercalinframe(yearselect, "1998", "October", "18");
+//
+////        WebElement submit = driver.findElement(By.name("Submit"));
+////        submit.click();
+//
+//        driver.switchTo().defaultContent();
 
         WebElement cal = driver.findElement(By.id("datepicker"));
         cal.click();
@@ -159,7 +159,7 @@ class SelectCalender extends Exception {
     }
 
 
-    public void calenderselect(String givenday, String givenmonth, String givenyear) throws ParseException, GivenVauleisoutofthemonth {
+    public void calenderselect(String givenday, String givenmonth, String givenyear) throws Exception {
         SelectCalender obj = new SelectCalender(driver);
 
         if (Integer.parseInt(givenday) == 29 & givenmonth.equals("February")) {
@@ -230,8 +230,7 @@ class SelectCalender extends Exception {
             WebElement date = driver.findElement(By.xpath("(//a[@class ='ui-state-default' and contains(text(), '" + givenday + "')])[1]"));
             date.click();
 
-        }
-        else if ((Integer.parseInt(givenyear) == Integer.parseInt(Year) & monthnum > monthgivennum)) {
+        } else if ((Integer.parseInt(givenyear) == Integer.parseInt(Year) & monthnum > monthgivennum)) {
 
             while (!(Month.equals(givenmonth) & Year.equals(givenyear))) {
 
@@ -278,7 +277,7 @@ class SelectCalender extends Exception {
     }
 
 
-    public void foranothercalinframe(WebElement ele, String year, String month, String date) throws ParseException {
+    public void foranothercalinframe(WebElement ele, String date, String month, String year) throws ParseException {
         Select cal = new Select(ele);
         cal.selectByVisibleText(year);
 

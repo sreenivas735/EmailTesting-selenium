@@ -32,9 +32,9 @@ public class CommonBaseActions {
 
     public String gettextmethod(By byElement) {
         waitmethodforvVisibletext(byElement);
-       String msg = driver.findElement(byElement).getText();
+        String msg = driver.findElement(byElement).getText();
         System.out.println(msg);
-       return msg;
+        return msg;
     }
 
     public void waitmethodforvVisibletext(By byelement) {
@@ -46,7 +46,7 @@ public class CommonBaseActions {
     public void screenshot(String filename) throws IOException {
         TakesScreenshot screen = (TakesScreenshot) driver;
         File source = screen.getScreenshotAs(OutputType.FILE);
-        File dest = new File("D:\\TESTING\\Files\\"+filename);
+        File dest = new File("D:\\TESTING\\Files\\" + filename);
         FileUtils.copyFile(source, dest);
     }
 
